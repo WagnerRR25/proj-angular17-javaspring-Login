@@ -5,11 +5,6 @@ import { PrimaryInputComponent } from '../../component/primary-input/primary-inp
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 
-interface LoginForm {
-  email: FormControl,
-  password: FormControl
-}
-
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -21,12 +16,13 @@ interface LoginForm {
   providers: [
     LoginService
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.scss'
 })
 export class LoginComponent {
   loginForm!: FormGroup;
   toastService: any;
+signupForm: any;
 
   constructor(
     private readonly router: Router,
